@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  name:string;
+  name:string = '';
+  search: any = [];
+  public currentSearch(){
+    this.search.push(this.name);
+    this.name = '';
+
+  }
   constructor() { }
 
   ngOnInit(): void {

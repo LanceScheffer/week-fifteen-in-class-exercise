@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+  name:string = '';
+  search: any = [];
+  public currentSearch(){
+    this.search.push(this.name);
+    this.name = '';
+
+  }
 
   constructor() { }
 
